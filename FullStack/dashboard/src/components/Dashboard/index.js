@@ -99,9 +99,12 @@ const useStyles = makeStyles(theme => ({
     overflow: 'auto',
     flexDirection: 'column',
   },
-  fixedHeight: {
-    height: 440,
+  fixedTallHeight: {
+    height: 480,
   },
+  fixedSmallHeight: {
+    height: 240
+  }
 }));
 
 const App = () => {
@@ -113,7 +116,9 @@ const App = () => {
   const handleDrawerClose = () => {
     setOpen(false);
   };
-  const fixedHeightPaper = clsx(classes.paper, classes.fixedHeight);
+  const tallHeightPaper = clsx(classes.paper, classes.fixedTallHeight);
+
+  const smallHeightPaper = clsx(classes.paper, classes.fixedSmallHeight)
 
   return (
     <div className={classes.root}>
@@ -153,23 +158,25 @@ const App = () => {
         </div>
         <Divider />
         <List>{mainListItems}</List>
-        <Divider />
-        <List>{secondaryListItems}</List>
       </Drawer>
       <main className={classes.content}>
         <div className={classes.appBarSpacer} />
         <Container maxWidth="lg" className={classes.container}>
           <Grid container spacing={3}>
+            <Grid item xs={12}>
+            <Paper className={tallHeightPaper}>
+                <Map longitude={47.3769} latitude={8.5417} width= '100%' height = '100%' zoom = {0} />
+              </Paper>
+            </Grid>
             {/* Chart */}
             <Grid item xs={12} md={8} lg={9}>
-              <Paper className={fixedHeightPaper}>
-                {/* <Chart /> */}
-                <Map longitude={47.3769} latitude={8.5417} width= '100%' height = '100%' zoom = {0} />
+              <Paper className={smallHeightPaper}>
+                <Chart />
               </Paper>
             </Grid>
             {/* Recent Deposits */}
             <Grid item xs={12} md={4} lg={3}>
-              <Paper className={fixedHeightPaper}>
+              <Paper className={smallHeightPaper}>
                 <Deposits />
               </Paper>
             </Grid>
