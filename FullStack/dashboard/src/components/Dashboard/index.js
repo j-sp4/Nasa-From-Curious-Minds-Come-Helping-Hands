@@ -22,6 +22,7 @@ import Chart from '../Chart';
 import Deposits from '../Deposits';
 import Orders from '../Orders';
 import Map from '../Map'
+import 'react-map-gl-geocoder/dist/mapbox-gl-geocoder.css'
 
 const drawerWidth = 240;
 
