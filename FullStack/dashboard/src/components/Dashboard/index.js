@@ -21,7 +21,7 @@ import { mainListItems, secondaryListItems } from '../ListItems';
 import Chart from '../Chart';
 import Deposits from '../Deposits';
 import Orders from '../Orders';
-
+import Map from '../Map'
 
 const drawerWidth = 240;
 
@@ -100,7 +100,7 @@ const useStyles = makeStyles(theme => ({
     flexDirection: 'column',
   },
   fixedHeight: {
-    height: 240,
+    height: 440,
   },
 }));
 
@@ -130,7 +130,7 @@ const App = () => {
             <MenuIcon />
           </IconButton>
           <Typography component="h1" variant="h6" color="inherit" noWrap className={classes.title}>
-            Dashboard
+            Helping Hands
           </Typography>
           <IconButton color="inherit">
             <Badge badgeContent={4} color="secondary">
@@ -163,7 +163,8 @@ const App = () => {
             {/* Chart */}
             <Grid item xs={12} md={8} lg={9}>
               <Paper className={fixedHeightPaper}>
-                <Chart />
+                {/* <Chart /> */}
+                <Map longitude={47.3769} latitude={8.5417} width= '100%' height = '100%' zoom = {0} />
               </Paper>
             </Grid>
             {/* Recent Deposits */}
