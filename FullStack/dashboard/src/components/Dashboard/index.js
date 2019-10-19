@@ -165,7 +165,7 @@ const App = () => {
           <Grid container spacing={3}>
             <Grid item xs={12}>
             <Paper className={tallHeightPaper}>
-                <Map longitude={47.3769} latitude={8.5417} width= '100%' height = '100%' zoom = {0} />
+                <Map />
               </Paper>
             </Grid>
             {/* Chart */}
