@@ -1,0 +1,1 @@
+export const setViewportAction = (viewport)=>({type: 'setViewport', payload: viewport})
