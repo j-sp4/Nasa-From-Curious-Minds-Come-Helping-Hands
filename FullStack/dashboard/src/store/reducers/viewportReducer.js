@@ -6,8 +6,8 @@ const firstRenderState ={
     zoom: 5,
 }
 
-const mapReducer = (state = firstRenderState, action) =>{
-    console.log('in the reducer', action )
+const viewportReducer = (state = firstRenderState, action) =>{
+    //console.log('in the reducer', action )
     switch(action.type){
         case 'setViewport':{
             const newState = action.payload
@@ -15,13 +15,10 @@ const mapReducer = (state = firstRenderState, action) =>{
             newState.height = '100%';
             return newState
         }
-        case 2:{
-
-        }
         default:{
             return state
         }
     }
 
 }
-export default mapReducer
+export default viewportReducer

@@ -1,9 +1,10 @@
 import { combineReducers } from 'redux';
-import mapReducer from './mapReducer'
+import viewportReducer from './viewportReducer'
+import mapStyleReducer from './mapStyleReducer'
 
 const reducer = combineReducers({
-    map: mapReducer
+    viewport: viewportReducer,
+    mapStyle: mapStyleReducer
   });
   
 export default reducer;
-  
