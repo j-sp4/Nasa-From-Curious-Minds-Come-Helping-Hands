@@ -22,7 +22,7 @@ export default function DisasterIndex(props) {
   return (
     <div>
       <Box component="fieldset" mb={3} borderColor="transparent">
-        <Typography component="legend"> {props.disasterIndex } / 10.0</Typography>
+        <Typography component="legend"> <b>{props.disasterIndex } / 10.0</b></Typography>
         <StyledRating
           readOnly
           name="customized-color"

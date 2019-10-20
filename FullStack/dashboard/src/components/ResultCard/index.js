@@ -30,22 +30,13 @@ export default function ResultCard(props) {
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="h2">
-            Before / After
+            { props.date }
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
 
-            This describes the picture
           </Typography>
         </CardContent>
       </CardActionArea>
-      <CardActions>
-        <Button size="small" color="primary">
-          Share
-        </Button>
-        <Button size="small" color="primary">
-          Learn More
-        </Button>
-      </CardActions>
     </Card>
   );
 }

@@ -17,6 +17,7 @@ import {useStyles} from './styles'
 import HomeMapScreen from '../HomeMapScreen';
 import ResultsScreen from '../ResultsScreen'
 import {BrowserRouter as Router, Switch, Route, Link} from 'react-router-dom'
+import Icon from '../../assets/icon.png'
 
 const App = () => {
   const classes = useStyles();
@@ -50,9 +51,7 @@ const App = () => {
             NASA Disaster Indexing
           </Typography>
           <IconButton color="inherit">
-            <Badge badgeContent={4} color="secondary">
-              <NotificationsIcon />
-            </Badge>
+              <img src={Icon} width="40px" />
           </IconButton>
         </Toolbar>
       </AppBar>

@@ -8,6 +8,8 @@ import Geocoder from "react-map-gl-geocoder";
 import LocationOnIcon from '@material-ui/icons/LocationOn';
 import SvgIcon from '@material-ui/core/SvgIcon';
 import Button from '@material-ui/core/Button'
+import { Link } from "react-router-dom";
+
 
 class Map extends React.Component {
   mapRef = React.createRef();
@@ -38,9 +40,11 @@ class Map extends React.Component {
               
         </Marker> : null}
         </MapGl>
-        <Button variant="contained" color="primary" >
-        Confirm
-      </Button>
+        
+          <Button variant="contained" color="primary" >
+          <Link to='/result/'>Confirm</Link>
+          </Button>
+        
       </>
     );
   }
