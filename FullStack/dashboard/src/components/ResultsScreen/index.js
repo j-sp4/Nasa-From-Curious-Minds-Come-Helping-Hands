@@ -15,7 +15,7 @@ let today = date.toLocaleString()
 let after = `After: ${today}`
 date.setDate(date.getDate()-25);
 let before = `Before: ${date.toLocaleString()}`
-let disasterIndex = 7.39
+let disasterIndex = 3.11
 
 const ResultsScreen = props => {
   return (
@@ -40,10 +40,10 @@ const ResultsScreen = props => {
           </Paper>
         </Grid>
         <Grid item xs={6}>
-          <ResultCard picUrl={pic1} date={before} />
+          <ResultCard picUrl={pic2} date={before} />
         </Grid>
         <Grid item xs={6}>
-          <ResultCard picUrl={pic2} date={after}/>
+          <ResultCard picUrl={pic1} date={after}/>
         </Grid>
       </Grid>
     </Container>
