@@ -1,0 +1,22 @@
+body {
+  margin: 0;
+  padding:0;
+}
+.mapboxgl-ctrl-attrib{
+  visibility:hidden;
+}
+
+.mapboxgl-ctrl-logo{
+  visibility: hidden;
+}
+
+.MuiTouchRipple-root {&a {
+  text-decoration: none;
+color: white;
+}
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
