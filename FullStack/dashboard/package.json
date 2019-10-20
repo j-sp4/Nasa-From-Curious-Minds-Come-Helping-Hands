@@ -5,6 +5,7 @@
   "dependencies": {
     "@material-ui/core": "^4.5.1",
     "@material-ui/icons": "^4.5.1",
+    "@material-ui/lab": "^4.0.0-alpha.29",
     "immutable": "^4.0.0-rc.12",
     "mapbox-gl": "^1.4.1",
     "node-sass": "^4.12.0",
