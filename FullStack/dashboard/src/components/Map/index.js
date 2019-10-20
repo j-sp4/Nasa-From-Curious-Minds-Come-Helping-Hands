@@ -6,6 +6,8 @@ import { setViewportAction, dragPointerAction, setPointerAction } from "../../st
 import "react-map-gl-geocoder/dist/mapbox-gl-geocoder.css";
 import Geocoder from "react-map-gl-geocoder";
 import LocationOnIcon from '@material-ui/icons/LocationOn';
+import SvgIcon from '@material-ui/core/SvgIcon';
+import Button from '@material-ui/core/Button'
 
 class Map extends React.Component {
   mapRef = React.createRef();
@@ -30,10 +32,15 @@ class Map extends React.Component {
             mapboxApiAccessToken={process.env.REACT_APP_MAPBOX_API_KEY}
           />
           {this.props.pointer.marker ? <Marker latitude={this.props.pointer.longitude} longitude={this.props.pointer.latitude} offsetLeft={-20} offsetTop={-10} draggable={true}  onDragEnd={this.props.setMapPointer}>
-          <LocationOnIcon/>
+          <SvgIcon color = 'primary'>
+              <LocationOnIcon/>
+            </SvgIcon>
               
         </Marker> : null}
         </MapGl>
+        <Button variant="contained" color="primary" >
+        Confirm
+      </Button>
       </>
     );
   }

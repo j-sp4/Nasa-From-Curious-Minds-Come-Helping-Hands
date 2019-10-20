@@ -20,6 +20,9 @@ const mapPointerReducer = (state=initialState , action) =>{
             newState.latitude = action.payload.latitude
             return newState
         }
+        case 'reset':{
+            return initialState
+        }
         default:{
             return state
         }

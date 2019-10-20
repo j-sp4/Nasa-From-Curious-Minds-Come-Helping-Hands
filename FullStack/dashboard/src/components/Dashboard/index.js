@@ -16,7 +16,7 @@ import { mainListItems } from '../ListItems';
 import {useStyles} from './styles'
 import HomeMapScreen from '../HomeMapScreen';
 import ResultsScreen from '../ResultsScreen'
-
+import {BrowserRouter as Router, Switch, Route, Link} from 'react-router-dom'
 
 const App = () => {
   const classes = useStyles();
@@ -32,6 +32,7 @@ const App = () => {
   const smallHeightPaper = clsx(classes.paper, classes.fixedSmallHeight)
 
   return (
+    <Router>
     <div className={classes.root}>
       <CssBaseline />
       <AppBar position="absolute" className={clsx(classes.appBar, open && classes.appBarShift)}>
@@ -72,10 +73,14 @@ const App = () => {
       </Drawer>
       <main className={classes.content}>
         <div className={classes.appBarSpacer} />
-        <HomeMapScreen classes={classes} tall={tallHeightPaper} small={smallHeightPaper}/>
-        {/* <ResultsScreen classes={classes} tall={tallHeightPaper} small={smallHeightPaper}/> */}
+        <Switch>
+          <Route exact path= '/' component={()=><HomeMapScreen classes={classes} tall={tallHeightPaper} small={smallHeightPaper}/>}/>
+          <Route exact path= '/result' component={()=><ResultsScreen classes={classes} tall={tallHeightPaper} small={smallHeightPaper}/>}/>
+        </Switch>
       </main>
     </div>
+    </Router>
+
   );
 }
 
