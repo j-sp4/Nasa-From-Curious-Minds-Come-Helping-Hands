@@ -1,0 +1,20 @@
+version: 2.1
+orbs:
+  deepcode: arrai/deepcode@1.0.0
+jobs:
+  dc-test:
+    executor:
+      name: deepcode/default
+    steps:
+      - checkout
+      - utils/add_ssh_config
+      - deepcode:
+          steps:
+            - run: Install additional OS packages
+            - run: Install DeepCode CLI
+            - run: Run DeepCode CLI
+workflows:
+    dc-test:
+      jobs: 
+        - dc-test
+    
